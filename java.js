@@ -1,35 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const input = document.getElementById('novoComentario');
-  const btnAdd = document.getElementById('btnAdicionar');
-  const lista = document.getElementById('listaComentarios');
+  const btn1 = document.getElementById('btn1');
+  const btn2 = document.getElementById('btn2');
+  const btn3 = document.getElementById('btn3');
 
-  btnAdd.addEventListener('click', () => {
-    const texto = input.value.trim();
-    if (!texto) return alert('Digite um comentário!');
+  const titulo = document.getElementById('titulo');
+  const texto = document.getElementById('texto');
+  const imagem = document.getElementById('imagem');
 
-    const div = document.createElement('div');
-    div.className = 'comentario';
-    div.innerHTML = `
-      <p>${texto}</p>
-      <div>
-        <button class="btnEditar">Editar</button>
-        <button class="btnRemover">Remover</button>
-      </div>
-    `;
+  btn1.addEventListener('click', () => {
+    titulo.textContent = ' Opção 1';
+    texto.textContent = ' primeira opção';
+    imagem.src = 'img/download (1).jfif';
+  });
 
-    lista.appendChild(div);
-    input.value = '';
+  btn2.addEventListener('click', () => {
+    titulo.textContent = ' Opção 2';
+    texto.textContent = ' segunda opção';
+    imagem.src = 'img/images.jfif';
+  });
 
-    // Remover comentário
-    div.querySelector('.btnRemover').addEventListener('click', () => {
-      div.remove();
-    });
-
-    // Editar comentário
-    div.querySelector('.btnEditar').addEventListener('click', () => {
-      const p = div.querySelector('p');
-      const novoTexto = prompt('Edite seu comentário:', p.textContent);
-      if (novoTexto !== null) p.textContent = novoTexto;
-    });
+  btn3.addEventListener('click', () => {
+    titulo.textContent = 'Opção 3';
+    texto.textContent = 'terceira opção';
+    imagem.src = 'img/download.jfif';
   });
 });

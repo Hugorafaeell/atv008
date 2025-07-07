@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comentários Dinâmicos</title>
+  <title>Menu de Controle</title>
 <link rel="stylesheet" href=".//style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Comentários</h1>
-    <input type="text" id="novoComentario" placeholder="Digite seu comentário...">
-    <button id="btnAdicionar">Adicionar Comentário</button>
-    <div id="listaComentarios"></div>
+    <nav>
+      <button id="btn1">Opção 1</button>
+      <button id="btn2">Opção 2</button>
+      <button id="btn3">Opção 3</button>
+    </nav>
+    <div id="conteudo" class="conteudo">
+      <h2 id="titulo"></h2>
+      <p id="texto">Este é o texto inicial.</p>
+      <img id="imagem" src="img/download (2).jfif" alt="Imagem inicial">
+    </div>
   </div>
   <script src=".//java.js"></script>
 </body>
